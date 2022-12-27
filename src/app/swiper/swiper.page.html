@@ -1,0 +1,114 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Sliders Swiper.js Demo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <h2>Auto Play Slider</h2>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+      <ion-card>
+        <swiper
+        pager="true"
+        [initialSlide]="0"
+        [slidesPerView]="1"
+        [autoplay]="true"
+        [loop]="true"
+        #slideWithNav
+        (swiper)="onSwiper($event)"
+        (slideChange)="onSlideChange(sliderOne,slideWithNav)"
+      >
+        <ng-template swiperSlide *ngFor="let s of sliderOne.slidesItems">
+          <img src="https://picsum.photos/300/200?t={{s.id}}" />
+        <ion-card-title>  <div class="slide-text"><span>Slide id {{s.id}}</span></div></ion-card-title>
+        </ng-template>
+      </swiper>
+      </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <h2>Slider 2</h2>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <span class="slider-nav arrow-prev" (click)="slidePrev(slideWithNav2)">
+          <div
+            class="prev-icon-custom custon-nav"
+            [class.disabled]="sliderTwo.isBeginningSlide"
+          ></div> 
+        </span>
+      </ion-col>
+      <ion-col>
+     <ion-card>
+      <swiper
+      pager="false"
+      [initialSlide]="0"
+      [slidesPerView]="1"
+      [autoplay]="true"
+      [centeredSlides]="true"
+      [spaceBetween]="20"
+      #slideWithNav2
+      (swiper)="onSwiper($event)"
+      (slideChange)="onSlideChange(sliderTwo,slideWithNav2)"
+    >
+      <ng-template swiperSlide *ngFor="let s of sliderTwo.slidesItems">
+        <img src="https://picsum.photos/300/200?t={{s.id}}" />
+      </ng-template>
+    </swiper>
+     </ion-card>
+      </ion-col>
+      <ion-col >
+        <span class="slider-nav arrow-next" (click)="slideNext(slideWithNav2)">
+          <div
+            class="next-icon-custom custon-nav"
+            [class.disabled]="sliderTwo.isEndSlide"
+          ></div>
+        </span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <h2>Slider 3</h2>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col >
+        <span class="slider-nav arrow-prev" (click)="slidePrev(slideWithNav3)">
+          <div
+            class="prev-icon-custom custon-nav"
+            [class.disabled]="sliderThree.isBeginningSlide"
+          ></div>
+        </span>
+      </ion-col>
+      <ion-col >
+      <ion-card>
+        <swiper
+        pager="false"
+        [initialSlide]="0"
+        [slidesPerView]="3"
+        #slideWithNav3=""
+        (swiper)="onSwiper($event)"
+        (slideChange)="onSlideChange(sliderThree,slideWithNav3)"
+      >
+        <ng-template swiperSlide *ngFor="let s of sliderThree.slidesItems">
+          <img src="https://picsum.photos/300/200?t={{s.id}}" />
+        </ng-template>
+      </swiper>
+      </ion-card>
+      </ion-col>
+      <ion-col>
+        <span class="slider-nav arrow-next" (click)="slideNext(slideWithNav3)">
+          <div
+            class="next-icon-custom custon-nav"
+            [class.disabled]="sliderThree.isEndSlide"
+          ></div>
+        </span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -26,40 +26,11 @@
 @import "~@ionic/angular/css/flex-utils.css";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
-ion-content{
-    background-color: #202020;
-}
-.nav-c{
-    font-size: 20px;
-    color: white;
-    
-}
-.nav-font1{
-    font-size: 35px;
-    font-family: 'Poppins' , sans-serif;
-}
-// hoveron nac-font
-.hover-underline-animation {
-    display: inline-block;
-    position: relative;
-    color: white;
-  }
-  
-  .hover-underline-animation::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color:white;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-  }
-  
-  .hover-underline-animation:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
+// global.scss
+@import "~swiper/scss";
+@import "~swiper/scss/autoplay";
+@import "~swiper/scss/keyboard";
+@import "~swiper/scss/pagination";
+@import "~swiper/scss/scrollbar";
+@import "~swiper/scss/zoom";
 
