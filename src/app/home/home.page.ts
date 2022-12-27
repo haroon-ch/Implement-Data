@@ -25,36 +25,5 @@ export class HomePage {
     ]);
   }
 
-  ionic(){
-    this.route.navigate(['ionic']);
-  }
-  contact(){
-    this.route.navigate(['contact-us']);
-  }
-  javascript(){
-    this.route.navigate(['javascript']);
-  }
-  firebase(){
-    this.route.navigate(['firebase']);
-  }
-  html(){
-    this.route.navigate(['html']);
-  }
-  bootstrap(){
-    this.route.navigate(['bootstrap']);
-  }
-  animation(){
-    this.route.navigate(['animation']);
-  }
-  blog(){
-    this.route.navigate(['blog']);
-  }
-  angular(){
-    this.route.navigate(['angular']);
-  }
-  //data
-  camera(){
-    this.route.navigate(['camera']);
-  }
-
+ 
 }
