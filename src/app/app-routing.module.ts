@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: 'swiper',
     loadChildren: () => import('./swiper/swiper.module').then( m => m.SwiperPageModule)
+  },
+  {
+    path: 'show-less',
+    loadChildren: () => import('./show-less/show-less.module').then( m => m.ShowLessPageModule)
   }
 ];
 

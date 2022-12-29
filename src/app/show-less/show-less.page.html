@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>show-less</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let x of announcement">
+    <ion-card class="group-box">
+        <div>
+            {{x.text}}
+        </div>
+        <div>
+            <div *ngIf="!x.isReadMore">
+                {{trimString(x.text,100)}}
+            </div>
+            <div *ngIf="x.isReadMore">
+                {{x.text}}
+            </div>
+            <a (click)="x.isReadMore = !x.isReadMore">Show <span [innerHtml]="x.isReadMore ? 'less' : 'More'">  </span>
+            </a>
+        </div>
+    </ion-card>
+</div>
+</ion-content>
