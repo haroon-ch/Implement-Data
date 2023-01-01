@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'show-less',
     loadChildren: () => import('./show-less/show-less.module').then( m => m.ShowLessPageModule)
+  },
+  {
+    path: 'radio-value',
+    loadChildren: () => import('./radio-value/radio-value.module').then( m => m.RadioValuePageModule)
   }
 ];
 

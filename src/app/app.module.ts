@@ -7,7 +7,10 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-import { SwiperModule } from 'swiper/angular';
+// import { SwiperModule } from 'swiper/angular';
+
+// import
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   schemas: [
@@ -15,7 +18,11 @@ import { SwiperModule } from 'swiper/angular';
     NO_ERRORS_SCHEMA
   ],
   declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,SwiperModule],
+  imports: [BrowserModule, IonicModule.forRoot(),
+     AppRoutingModule,
+    ReactiveFormsModule,
+    // SwiperModule
+  ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
