@@ -11,6 +11,7 @@ import Swiper from 'swiper';
   styleUrls: ['./swiper.page.scss'],
 })
 export class SwiperPage implements OnInit {
+  
   @ViewChild('slideWithNav', { static: false }) slideWithNav: IonSlides;
   @ViewChild('slideWithNav2', { static: false }) slideWithNav2: IonSlides;
   @ViewChild('slideWithNav3') slideWithNav3: Swiper;
