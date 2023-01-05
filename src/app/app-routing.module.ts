@@ -22,6 +22,10 @@ const routes: Routes = [
   {
     path: 'radio-value',
     loadChildren: () => import('./radio-value/radio-value.module').then( m => m.RadioValuePageModule)
+  },
+  {
+    path: 'ion-loader',
+    loadChildren: () => import('./ion-loader/ion-loader.module').then( m => m.IonLoaderPageModule)
   }
 ];
 
