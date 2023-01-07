@@ -8,6 +8,7 @@ import { IonLoaderPageRoutingModule } from './ion-loader-routing.module';
 
 import { IonLoaderPage } from './ion-loader.page';
 
+
 @NgModule({
   imports: [
     CommonModule,
