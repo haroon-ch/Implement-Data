@@ -7,7 +7,6 @@ import { IonLoaderService } from '../ion-loader.service';
 })
 export class IonLoaderPage implements OnInit {
 
-
   constructor(private ionLoaderService: IonLoaderService) { }
   
   displayAutoLoader() {
