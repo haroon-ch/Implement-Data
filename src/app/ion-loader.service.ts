@@ -6,6 +6,7 @@ import { LoadingController } from '@ionic/angular';
 })
 export class IonLoaderService {
 
+  
 
   constructor(public loadingController: LoadingController) { }
 

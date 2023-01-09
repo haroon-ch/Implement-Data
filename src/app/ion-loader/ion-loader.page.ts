@@ -10,6 +10,7 @@ export class IonLoaderPage implements OnInit {
   constructor(private ionLoaderService: IonLoaderService) { }
   
   displayAutoLoader() {
+    
     this.ionLoaderService.autoLoader();
   }
   showLoader() {
